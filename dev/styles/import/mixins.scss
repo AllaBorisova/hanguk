@@ -1,0 +1,20 @@
+@mixin tr {
+  transition: all 0.25s ease;
+}
+@mixin ulClean {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin flexcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexss {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}

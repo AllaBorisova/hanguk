@@ -1,0 +1,254 @@
+.form {
+  max-width: 55.8rem;
+  &__columns3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2%;
+    margin-bottom: 3.5rem;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .columns3 {
+    grid-column: span 3;
+    @media (max-width: 992px) {
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      grid-column: span 1;
+    }
+  }
+  &__columns2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2%;
+    margin-bottom: 3.5rem;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__columns5 {
+    display: grid;
+    grid-template-columns: 29.5% 29.5% 11% 11% 11%;
+    column-gap: 2%;
+    margin-bottom: 3.5rem;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__label {
+    font-size: 1.6rem;
+    display: block;
+    white-space: nowrap;
+  }
+  &__block {
+    margin-bottom: 1.1rem;
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      // width: 28.5rem;
+      border: none;
+      padding: 0 1.6rem;
+      height: 4.8rem;
+      width: 100%;
+      color: $color-text;
+      background: #e6e6e6;
+      font-weight: 700;
+      font-size: 2rem;
+      &::placeholder {
+        color: $color-text;
+      }
+    }
+    textarea {
+      border: none;
+      padding: 1.6rem;
+      height: 11.7rem;
+      width: 100%;
+      color: $color-text;
+      background: #e6e6e6;
+      font-weight: 700;
+      font-size: 2rem;
+      &::placeholder {
+        color: $color-text;
+      }
+    }
+  }
+  &__flex {
+    display: flex;
+    gap: 1.7rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    @media (max-width: 992px) {
+      gap: 1rem;
+    }
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.count {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  &__minus,
+  &__plus {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    @include flexcc;
+    border-radius: 50%;
+    background: #d9d9d9;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1em;
+    cursor: pointer;
+    @include tr;
+    &:hover {
+      color: #fff;
+      background: $color-primary;
+    }
+  }
+  &__prod {
+    width: 2rem;
+    height: 2.2rem;
+    border: none;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+.custom-checkbox {
+  display: flex;
+  gap: 1rem;
+  &__checkbox {
+    display: none;
+  }
+  &__span {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #e4e6e9;
+
+    cursor: pointer;
+    background: #f9f9f9;
+  }
+  &__span,
+  &__label {
+    display: block;
+  }
+  &__span {
+    margin-top: 0.4rem;
+  }
+  &__label {
+    color: $color-text;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    a {
+      color: $color-text;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__checkbox:checked + &__span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.2rem;
+    bottom: 0.2rem;
+    left: 0.2rem;
+    background: url(../img/cross-sign.png) top center no-repeat;
+    background-size: contain;
+  }
+}
+
+.custom-radio {
+  display: flex;
+  gap: 1rem;
+  &__radio {
+    display: none;
+  }
+  &__span {
+    position: relative;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    cursor: pointer;
+    border-radius: 50%;
+    background: #d9d9d9;
+  }
+  &__span,
+  &__label {
+    display: block;
+  }
+  &__span {
+    margin-top: 0.4rem;
+  }
+  &__label {
+    color: $color-text;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    a {
+      color: $color-text;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__radio:checked + &__span {
+    background: $color-primary;
+  }
+  &__radio:checked + &__span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #d9d9d9;
+    border-radius: 50%;
+  }
+  &_reverse-red {
+    flex-direction: row-reverse;
+    .custom-radio__radio:checked + .custom-radio__span::before {
+      background: $color-second;
+    }
+  }
+}
+.select-city {
+  padding: 1.2rem 1.7rem;
+  background: #eff1f4;
+  border-radius: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 1em;
+  margin-left: auto;
+  border: 1px solid #e4e6e9;
+  background: url(../img/pin.png) 2rem center no-repeat #eff1f4;
+  padding-left: 5rem;
+  background-size: 1.3rem;
+}

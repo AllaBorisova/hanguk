@@ -1,0 +1,52 @@
+main.main
+	.container
+		h1.h1 Корзина
+		.cart-detail
+			.cart-detail__left
+				.cart-detail__items
+					.cart-detail__item
+						.cart-detail__img(style="background-image:url(./img/product.png)")
+						.cart-detail__name Холодный суп с лапшой
+						.cart-detail__one-price Цена за шт.
+							span 359,00
+						.cart-detail__count Кол-во
+							.count
+								span.count__minus -
+								input.count__prod(type="number" name="" value="1")
+								span.count__plus +
+						.cart-detail__full-price Стоимость
+							span 359,00
+						a.cart-detail__delete(href="") 
+					.cart-detail__item
+						.cart-detail__img(style="background-image:url(./img/product.png)")
+						.cart-detail__name Холодный суп с лапшой
+						.cart-detail__one-price Цена за шт.
+							span 359,00
+						.cart-detail__count Кол-во
+							.count
+								span.count__minus -
+								input.count__prod(type="number" name="" value="1")
+								span.count__plus +
+						.cart-detail__full-price Стоимость
+							span 359,00
+						a.cart-detail__delete(href="") 
+			.cart-detail__right 
+				.cart-detail__title Ваш заказ
+				.cart-detail__summ 
+					span Стоимость
+					span 718,00 руб.
+				.cart-detail__delivery 
+					span Доставка
+					.cart-detail__radios
+						label.custom-radio
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label Самовывоз (бесплатно)
+						label.custom-radio
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label Курьер(500 руб.)
+				.cart-detail__itog 
+					span Итого:
+					span.cart-detail__price 1218 руб.
+				a.button.button_full(href="") Оформить заказ

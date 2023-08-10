@@ -1,0 +1,28 @@
+.bg-menu
+.bg-img1
+
+
+header.header
+	.container.header__container
+		a.logo(href="/index.html")
+			img(src="./img/logo.png" alt="")
+		nav.header__nav.menu
+			ul
+				li
+					a(href="") меню
+				li
+					a(href="") рестораны
+				li
+					a(href="") контакты
+				li
+					a(href="") вакансии
+		a.phone(href="tel:+3532353353") 353-353
+		.header__links
+			a.header__link(href="")
+				include ../../img/user.svg
+			a.header__link.show-sidebar-cart.active(href="")
+				span 2
+				include ../../img/cart.svg
+		.hamburger.hamburger--squeeze.js-hamburger
+			.hamburger-box
+				.hamburger-inner

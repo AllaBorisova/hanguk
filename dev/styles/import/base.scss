@@ -1,0 +1,470 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+
+  @media (max-width: 1560px) {
+    font-size: 9px;
+  }
+  @media (max-width: 1200px) {
+    font-size: 8px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 7px;
+  }
+  @media (max-width: 992px) {
+    font-size: 10px;
+  }
+}
+blockquote,
+body,
+dd,
+dl,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+h4,
+li,
+ol,
+p,
+ul {
+  margin: 0;
+}
+
+body {
+  font-family: $font;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  height: 100%;
+  color: $color-text;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  min-height: 100vh;
+  background: #f2f2f2;
+  position: relative;
+
+  @media (max-width: 767px) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}
+
+.bg-img1 {
+  width: 110.1424rem;
+  height: 72.0433rem;
+  background: url(../img/hanguk.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0rem;
+  top: -2.5rem;
+  z-index: -1;
+}
+.adaptive_video {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.adaptive_video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+textarea {
+  resize: none;
+}
+:active,
+:focus {
+  outline: none !important;
+}
+::-moz-focus-inner {
+  border: 0 !important;
+}
+.container {
+  max-width: 156rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+  @media (max-width: 992px) {
+    padding: 0 1.5rem;
+  }
+}
+
+.page-flex {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+  .catalog-count {
+    font-size: 1.8rem;
+    line-height: 1em;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #8d9298;
+    @media (max-width: 767px) {
+      // font-size: 1.8rem;
+    }
+  }
+  @media (max-width: 767px) {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-top: 1.4rem;
+    margin-bottom: 2.6rem;
+  }
+}
+
+.h2 {
+  font-size: 5rem;
+  line-height: 6rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4.5rem;
+  &_white {
+    color: #fff;
+  }
+  @media (max-width: 992px) {
+    font-size: 3.5rem;
+    line-height: 1.2em;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 767px) {
+    font-size: 2.5rem;
+  }
+}
+.main {
+  flex: 1;
+}
+
+.white-popup {
+  position: relative;
+  background: #fff;
+
+  width: auto;
+  width: 104.4rem;
+  margin: 2rem auto;
+  border-radius: 1.5rem;
+  // border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 15px 15px 52px 0px rgba(0, 0, 0, 0.37);
+}
+.mfp-bg {
+  opacity: 0.8;
+  background: #fff;
+}
+.mfp-close-btn-in .mfp-close {
+  font-size: 0px;
+  background: url(../img/close-popup.svg) center no-repeat;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  top: 1.9rem;
+  right: 1.8rem;
+}
+/*----------------------------------------------------------------------------------*/
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // width: 100vw;
+  width: 100%;
+  height: 100%;
+  // overflow-x: hidden;
+  // &_resume {
+  //   left: calc(-50vw + 76rem);
+  // }
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.resume-img1 {
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  z-index: 1;
+  background: url(../img/resume1.png) center no-repeat;
+  background-size: contain;
+  top: -24.9rem;
+  top: 0rem;
+  right: -21rem;
+  @include tr;
+}
+.resume-img2 {
+  width: 47.3rem;
+  height: 37.6rem;
+  position: absolute;
+  z-index: 1;
+  background: url(../img/resume2.png) center no-repeat;
+  background-size: contain;
+  bottom: -8.59rem;
+  left: -10rem;
+  @include tr;
+}
+.resume-img3 {
+  width: 23.1rem;
+  height: 23.1rem;
+  position: absolute;
+  z-index: 1;
+  background: url(../img/resume3.png) center no-repeat;
+  background-size: contain;
+  bottom: -1.38rem;
+  left: 44.1rem;
+  @include tr;
+}
+.main-img1 {
+  width: 55.6rem;
+  height: 28.6rem;
+  background: url(../img/main1.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 4;
+  top: 0px;
+  left: 23.8rem;
+}
+.main-img2 {
+  width: 29.1rem;
+  height: 30.3rem;
+  background: url(../img/main2.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 4;
+  top: 9.2rem;
+  left: 0px;
+}
+.main-img3 {
+  width: 13.8rem;
+  height: 14.6rem;
+  background: url(../img/main3.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 4;
+  top: 34.9rem;
+  left: 0px;
+}
+.main-img4 {
+  width: 16.6rem;
+  height: 15.4rem;
+  background: url(../img/main4.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 4;
+  top: 10.9rem;
+  right: 0px;
+}
+.main-img5 {
+  width: 55.6rem;
+  height: 55.6rem;
+  background: url(../img/main5.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -2;
+  top: 46rem;
+  right: -15rem;
+}
+.vacancy-img1 {
+  width: 11.3rem;
+  height: 10.4rem;
+  background: url(../img/vacancy1.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 4;
+  top: 13.9rem;
+  right: 40.9rem;
+}
+.vacancy-img2 {
+  width: 13.5rem;
+  height: 12.5rem;
+  background: url(../img/vacancy2.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 3;
+  top: 18rem;
+  right: 35.6rem;
+}
+.vacancy-img3 {
+  width: 17.7rem;
+  height: 17.3rem;
+  background: url(../img/vacancy3.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 2;
+  top: 19rem;
+  right: 27rem;
+}
+.vacancy-img4 {
+  width: 42.5rem;
+  height: 52.5rem;
+  background: url(../img/vacancy4.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -2;
+  top: -2rem;
+  right: -7rem;
+}
+.vacancy-img5 {
+  width: 24.8rem;
+  height: 23rem;
+  background: url(../img/vacancy5.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 4;
+  top: 38rem;
+  right: -7rem;
+}
+.main-img6 {
+  width: 10.3rem;
+  height: 10rem;
+  background: url(../img/main6.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -2;
+  top: 0rem;
+  left: -4.2rem;
+}
+.main-star-big {
+  width: 10.7rem;
+  height: 10.2rem;
+  background: url(../img/star-big.svg) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -2;
+  top: -6.6rem;
+  left: 14.19rem;
+}
+.main-star-min {
+  width: 7.5rem;
+  height: 7.2rem;
+  background: url(../img/star-min.svg) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -2;
+  top: -2.6rem;
+  right: 23rem;
+}
+.main-img7 {
+  width: 10.6rem;
+  height: 10.5rem;
+  background: url(../img/main7.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -2;
+  top: -5rem;
+  right: 0rem;
+}
+.main-img8 {
+  width: 12.4rem;
+  height: 10.5rem;
+  background: url(../img/main8.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -3;
+  top: -3rem;
+  right: -3.3rem;
+}
+.main-img9 {
+  width: 7.9rem;
+  height: 7.9rem;
+  background: url(../img/main9.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -3;
+  top: 1rem;
+  right: 15.7rem;
+}
+.main-img10 {
+  width: 8.3rem;
+  height: 8.2rem;
+  background: url(../img/main10.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -3;
+  bottom: 11.57rem;
+  right: 40rem;
+}
+.main-img11 {
+  width: 9.9rem;
+  height: 9.7rem;
+  background: url(../img/main11.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: 1;
+  bottom: 9rem;
+  left: 78rem;
+}
+.main-img12 {
+  width: 14.6rem;
+  height: 14.4rem;
+  background: url(../img/main12.png) center no-repeat;
+  background-size: contain;
+  @include tr;
+  position: absolute;
+  z-index: -3;
+  top: 10rem;
+  left: 27rem;
+}

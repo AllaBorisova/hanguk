@@ -1,0 +1,38 @@
+main.main
+	.container
+		h1.h1 Меню
+			.chooses 
+				input.chooses__input.chooses__input_rest(type="text" placeholder="Выберите ресторан")
+				input.chooses__input.chooses__input_search(type="text" placeholder="Поиск")
+		.menu-real 
+			a.menu-real__link.menu-real__link_hit(href="") ХИТ-ЛИСТ
+			a.menu-real__link.menu-real__link_chili(href="") Острое
+			a.menu-real__link.menu-real__link_carrot(href="") Вегетарианское
+			a.menu-real__link(href="") Салаты и закуски
+			a.menu-real__link(href="") Супы
+			a.menu-real__link(href="") Дошираки
+			a.menu-real__link(href="") Блюда с рисом
+			a.menu-real__link(href="") Блюда с лапшой
+			a.menu-real__link(href="") Бургер Ким
+			a.menu-real__link(href="") Десерты
+			a.menu-real__link.menu-real__link_more(href="") Еще
+		.catalog
+			.catalog__items
+				- for (var x = 0; x < 8; x++)
+					+product-card('product.png', '250г / 450 ккал', 'Корейский ролл с говядиной, овощами и омлетом', '359 руб.', 'КИМПАБ С ГОВЯДИНОЙ')
+					+product-card('product2.png', '250г / 450 ккал', 'Корейский ролл с говядиной, овощами и омлетом', '359 руб.', 'КУКСУ')
+			//- .pagination
+			//-   ul
+			//-     li
+			//-       a(href="")
+			//-         img(src="./img/arrow-left.png" alt="")
+			//-     li
+			//-       a.active(href="") 1
+			//-     li
+			//-       a(href="") 2
+			//-     li
+			//-       a(href="") 3
+			//-     li
+			//-       a(href="")
+			//-         img(src="./img/arrow-right.png" alt="")
+

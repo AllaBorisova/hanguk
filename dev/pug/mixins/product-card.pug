@@ -1,0 +1,10 @@
+mixin product-card(imgsrc, option, desc, price, name)
+  .catalog__item
+    a.catalog__img.open-popup-link(href="#product-popup")(style='background-image:url(./img/' + imgsrc +')')
+    .catalog__desc
+      a.catalog__name.open-popup-link(href="#product-popup")= name
+      .catalog__text= desc
+      .catalog__buttons
+        .catalog__options= option
+        .catalog__price= price
+        a.button-cart(href="")

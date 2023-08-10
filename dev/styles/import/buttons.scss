@@ -1,0 +1,55 @@
+.button {
+  @include flexcc;
+  display: inline-flex;
+  text-decoration: none;
+  border: none;
+  @include tr;
+  font-size: 1.6rem;
+  line-height: 1em;
+  background: $color-primary;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 1.6rem 5.8rem;
+  @media (max-width: 767px) {
+    // padding: 1rem 0.8rem;
+    font-size: 1.4rem;
+  }
+  &_full {
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    // padding: 2.2rem 1.4rem;
+  }
+  &:hover {
+    // color: $color-primary;
+    // background: #fff;
+    background: lighten($color-primary, 15%);
+  }
+
+  &_bordered {
+    color: $color-text;
+    border: 1px solid #262626;
+    background: #fff;
+    &:hover {
+      background: #fff;
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+}
+.button-cart {
+  border-radius: 0.5rem;
+  background: url(../img/to-cart.svg) center no-repeat $color-primary;
+  width: 4.2rem;
+  height: 4.2rem;
+  @include tr;
+  &:hover {
+    // color: $color-primary;
+    // background: #fff;
+    background-color: lighten($color-primary, 15%);
+  }
+}

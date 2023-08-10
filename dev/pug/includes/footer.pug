@@ -1,0 +1,96 @@
+footer.footer
+	.container.footer__container
+		.footer__column
+			a.logo(href="/index.html")
+				img(src="./img/logo-footer.png" alt="")
+		.footer__row
+			nav.menu.menu_inverse
+				ul
+					li
+						a(href="") меню
+					li
+						a(href="") рестораны
+					li
+						a(href="") контакты
+					li
+						a(href="") вакансии
+			.socials.footer__socials
+				a(href="")
+					include ../../img/youtube.svg
+				a(href="")
+					include ../../img/vk.svg
+				a(href="")
+					include ../../img/tg.svg
+			a.phone.phone_inverse(href="tel:+3532353353") 353-353
+		.footer__row
+			.pay-info Мы принимаем к оплате
+				.pay-logos
+					img(src="./img/image-8.png" alt="")
+					img(src="./img/image-9.png" alt="")
+					img(src="./img/image-10.png" alt="")
+					img(src="./img/image-11.png" alt="")
+			.copyright.footer__copyright © 2010–2023 ООО "HANGUK" ИНН 444444444444
+			.politics
+				a(href="") Политика конфиденциальности
+
+.sidebar-cart
+	.sidebar-cart__inner 
+		.sidebar-cart__close
+		.sidebar-cart__title Ваша корзина
+		.sidebar-cart__items
+			.sidebar-cart__item
+				.sidebar-cart__img(style="background-image:url(./img/product.png)")
+				.sidebar-cart__desc
+					.sidebar-cart__name Холодный суп с лапшой
+					.sidebar-cart__text 1 х 359,00 руб. = 
+						span 359,00
+					a.delete-product(href="") УДАЛИТЬ
+			.sidebar-cart__item
+				.sidebar-cart__img(style="background-image:url(./img/product.png)")
+				.sidebar-cart__desc
+					.sidebar-cart__name Холодный суп с лапшой
+					.sidebar-cart__text 1 х 359,00 руб. = 
+						span 359,00
+					a.delete-product(href="") УДАЛИТЬ
+		.sidebar-cart__total Предварительный итог:
+			span 718,00 руб.
+		.sidebar-cart__footer 
+			a.link-bold(href="") Посмотреть корзину
+			a.button(href="") Оформить заказ
+			a.link-bold.hide-sidebar-cart(href="") Продолжить покупки
+		
+#product-popup.white-popup.mfp-hide 
+	.product-card 
+		.product-card__inner 
+			.product-card__left(style="background-image:url(./img/product-big.png)")
+			.product-card__right
+				.product-card__title Холодный суп с лапшой
+				.product-card__subtitle Холодный суп с лапшой, говядиной, салатами и омлетом
+				.product-card__text 
+					p Состав: Бульон острый, лапша, говядина, салат из капусты, салат из огурцов, омлет, кунжут, укроп
+					p 660г / 1090 ккал
+					p БЖУ: 32 / 40 / 150
+				.product-card__toppings 
+					.product-card__topping
+						.product-card__topping-img(style="background-image:url(./img/product.png)")
+						.product-card__topping-name Топпинг 1
+						.product-card__topping-desc
+							.product-card__topping-weight 100г
+							.product-card__topping-price + 100 р.
+					.product-card__topping
+						.product-card__topping-img(style="background-image:url(./img/product.png)")
+						.product-card__topping-name Топпинг 1
+						.product-card__topping-desc
+							.product-card__topping-weight 100г
+							.product-card__topping-price + 100 р.
+				.product-card__footer 
+					.product-card__price Сумма:
+						span 359 р.
+					a.button(href="") В корзину
+
+
+script(src="./libs/js/jquery.min.js")
+script(src="./libs/js/jquery.maskedinput.js")
+script(src="./libs/js/jquery.magnific-popup.js")
+script(src="./libs/slick/slick.js")
+script(src="./js/main.js")

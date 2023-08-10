@@ -1,0 +1,101 @@
+main.main
+	.section-hero
+		.container
+			.section-hero__inner 
+				.section-hero__left
+					.section-hero__title Еще вкуснее - 
+						span еще полезнее
+					.section-hero__slider
+						.section-hero__arrow-left
+						.section-hero__slide
+							.section-hero__item
+								.section-hero__desc
+									.section-hero__name Кимпабы
+									.section-hero__text Уникальное предложение, от которого сложно оказаться
+								a.section-hero__link.button(href="#") Перейти
+						.section-hero__arrow-right
+					//- .section-hero__after
+					//- 	img(src="./img/kim1.png" alt="")
+					//- 	img(src="./img/kim2.png" alt="")
+					//- 	img(src="./img/kim3.png" alt="")
+				.section-hero__right
+					//- img(src="./img/hero.png" alt="")
+					.section-hero__right-img
+					.section-hero__after
+						.section-hero__after-img.section-hero__after-img1.active(data-name="Кимпабы1" data-text="Уникальное предложение, от которого сложно оказаться1" data-link="#1")
+							img(src="./img/hero.png" alt="")
+						.section-hero__after-img.section-hero__after-img2(data-name="Кимпабы2" data-text="Уникальное предложение, от которого сложно оказаться2" data-link="#2")
+							img(src="./img/kim1.png" alt="")
+						.section-hero__after-img.section-hero__after-img3(data-name="Кимпабы3" data-text="Уникальное предложение, от которого сложно оказаться3" data-link="#3")
+							img(src="./img/kim2.png" alt="")
+						.section-hero__after-img.section-hero__after-img4(data-name="Кимпабы4" data-text="Уникальное предложение, от которого сложно оказаться4" data-link="#4")
+							img(src="./img/kim3.png" alt="")
+	.section-actions 
+		.container 
+			.section-actions__title.h2 Акции
+			.section-actions__items
+				.section-actions__item(style="background-image:url(./img/action1.png)")
+					.section-actions__name 
+						span -20% 
+						| на все <br>после 21:00
+				.section-actions__item(style="background-image:url(./img/action2.png)")
+					.section-actions__name 
+						span -20% 
+						| на хиты корейского стритфуда
+				.section-actions__item(style="background-image:url(./img/action3.png)")
+					.section-actions__name Кимпабы <br>359 руб.
+				.section-actions__item(style="background-image:url(./img/action4.png)")
+					.section-actions__name 
+						span -10% 
+						| на детское <br>меню
+
+	.section-catalog 
+		.parallax
+			.main-img6
+			.main-star-big
+			.main-star-min
+			.main-img7
+			.main-img8
+		.container 
+			.section-catalog__title.h2 Это стоит попробовать
+			.catalog__items.catalog__items_five
+				- for (var x = 0; x < 10; x++)
+					+product-card('product.png', '250г / 450 ккал', 'Корейский ролл с говядиной, овощами и омлетом', '359 руб.', 'КИМПАБ С ГОВЯДИНОЙ')
+					+product-card('product2.png', '250г / 450 ккал', 'Корейский ролл с говядиной, овощами и омлетом', '359 руб.', 'КУКСУ')
+			a.section-catalog__link(href="") К каталогу
+	.section-six
+		.parallax
+			.main-img9
+			.main-img10
+			.main-img11
+			.main-img12
+		.container
+			.section-six__img 
+				.section-six__center
+					img(src="./img/pic8.png" alt="")
+				.section-six__title 
+					span.section-six__count 6
+					.section-six__desc пунктов<br> о 
+						span.section-six__help пользе
+				.section-six__text.section-six__text_1 Большое количество белков, ненасыщенных жиров и аминокислот
+				.section-six__text.section-six__text_2 Нормализуют процесс пищеварения
+				.section-six__text.section-six__text_3 Способствуют предотвращению заболеваний сердечно-сосудистой системы
+				.section-six__text.section-six__text_4 Нормализуют процесс пищеварения
+				.section-six__text.section-six__text_5 Большое количество белков, ненасыщенных жиров и аминокислот
+				.section-six__text.section-six__text_6 Нормализуют процесс пищеварения
+	.section-rest
+		.container 
+			.section-rest__inner 
+				.section-rest__left 
+					.section-rest__title.h2 Наш ресторан
+					.section-rest__quote Походы в рестораны – одно из национальных увлечений японцев. Поэтому совершенно неудивительно, что Япония блещет разнообразием заведением, где можно вкусно покушать и хорошо отдохнуть. При этом каждый вид ресторана имеет свои особенности, а иногда и собственный этикет.
+					.section-rest__author Директор HANGUK
+				.section-rest__right 
+					img(src="./img/rest.png" alt="")
+	.section-where 
+		.container
+			.section-where__inner 
+				.section-where__left 
+					.section-where__title.h2 Где мы находимся
+					.section-where__text Адрес:<br>г. Москва, ул. Академика Королева д. 5
+				.section-where__map(style="background-image:url(./img/map.png)")

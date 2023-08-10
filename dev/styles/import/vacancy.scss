@@ -1,0 +1,214 @@
+.vacancy {
+  &-banner {
+    position: relative;
+    color: #fff;
+    background: url(../img/arrow.svg) center no-repeat $color-primary;
+    background-position: right 2.68rem top 1.4rem;
+    background-size: 3.6rem;
+    display: inline-flex;
+    padding-left: 2.4rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.723rem;
+    padding-right: 8rem;
+    transform: rotate(-3.27deg);
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+      background-size: 3.6rem 3rem;
+    }
+  }
+}
+.vacancies {
+  margin-bottom: 6.7rem;
+  @media (max-width: 767px) {
+    margin-bottom: 4rem;
+  }
+  &__item {
+    margin-bottom: 0.6rem;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 5px 12px 0px rgba(0, 0, 0, 0.07);
+    padding-left: 8rem;
+    padding-right: 11rem;
+    padding-top: 3.2rem;
+    padding-bottom: 3.4rem;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      padding: 3rem 4rem;
+    }
+    &.active {
+      .vacancies__desc {
+        max-height: inherit;
+        padding-top: 3.7rem;
+        padding-bottom: 2.1rem;
+      }
+      .vacancies__name {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    @media (max-width: 480px) {
+      font-size: 2.2rem;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2.6rem;
+      height: 1.5rem;
+      background: url(../img/arrow-down.svg) center no-repeat;
+      background-size: contain;
+      right: -2.6rem;
+      top: 0.8rem;
+      @include tr;
+    }
+  }
+  &__desc {
+    // padding-top: 3.7rem;
+    // padding-bottom: 2.1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    // display: none;
+    @include tr;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    max-width: 69.9rem;
+    font-size: 1.6rem;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    ul {
+      @include ulClean;
+      li {
+        padding-left: 2.5rem;
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: $color-text;
+          left: 1rem;
+          top: 0.8rem;
+          position: absolute;
+        }
+      }
+    }
+    .button {
+      margin-top: 3.7rem;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+}
+.advantages {
+  max-width: 42.4rem;
+  border-radius: 5px;
+  padding-top: 4.1rem;
+  padding-left: 4.4rem;
+  padding-right: 5.2rem;
+  padding-bottom: 11.5rem;
+  background: url(../img/logopack-logo-black-rgb-900-px-w-72-ppi-1.png) center
+    no-repeat #f2dcdc;
+  background-size: 6.3rem;
+  background-position: right 1.7rem bottom 1.7rem;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+  &__title {
+    font-size: 3.3687rem;
+    font-weight: 700;
+    line-height: 3.0002rem;
+    margin-bottom: 2.69rem;
+  }
+  &__list {
+    //@include ulClean;
+    margin-left: -1.6rem;
+    li {
+      font-size: 2rem;
+      line-height: 2.5rem;
+
+      font-weight: 700;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+.resume {
+  padding-top: 5.4rem;
+  padding-bottom: 7.3rem;
+  background: #fff;
+  position: relative;
+  @media (max-width: 767px) {
+    padding: 4rem 0;
+  }
+  // &:before {
+  //   content: "";
+  //   display: block;
+  //   height: 100%;
+  //   width: 100vw;
+  //   background: #fff;
+  //   z-index: -1;
+  //   position: absolute;
+  //   left: calc(-50vw + 76rem);
+  //   top: 0;
+  // }
+  &__inner {
+    @include flexss;
+    gap: 2rem;
+  }
+  &__title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 3.8rem;
+
+    @media (max-width: 480px) {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  &__left {
+    max-width: 45rem;
+  }
+  &__right {
+    padding-right: 5.6rem;
+    @media (max-width: 767px) {
+      padding-right: 0rem;
+    }
+  }
+}

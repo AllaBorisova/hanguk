@@ -1,0 +1,86 @@
+.footer {
+  border-bottom: 1.4rem solid #1c1c1c;
+  background: $color-footer-bg;
+  color: $color-footer-text;
+  padding: 2rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 7.8rem auto;
+
+    column-gap: 4.7rem;
+    row-gap: 2.5rem;
+    @media (max-width: 992px) {
+      justify-content: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 767px) {
+      justify-content: flex-start;
+    }
+  }
+  &__column {
+    grid-row: span 2;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7.3rem;
+    @media (max-width: 992px) {
+      gap: 3rem;
+    }
+
+    @media (max-width: 480px) {
+      gap: 1.5rem;
+    }
+  }
+  &__socials,
+  &__copyright {
+    margin-left: auto;
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 992px) {
+    .menu {
+      display: none;
+    }
+  }
+}
+.politics {
+  font-size: 1.2rem;
+  a {
+    color: $color-footer-text;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.socials {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    gap: 1.5rem;
+  }
+}
+.pay-info {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.pay-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+.copyright {
+  font-size: 1.2rem;
+}
